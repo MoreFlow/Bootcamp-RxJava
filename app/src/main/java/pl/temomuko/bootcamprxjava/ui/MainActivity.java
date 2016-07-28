@@ -20,8 +20,8 @@ import rx.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.user_image) ImageView userImageView;
     @BindView(R.id.user_name) TextView userTextView;
+    @BindView(R.id.user_image) ImageView userImageView;
 
     private Subscription subscription;
 
