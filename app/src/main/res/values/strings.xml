@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BootcampRxJava</string>
+    <string name="connection_error">Error getting person</string>
+</resources>
