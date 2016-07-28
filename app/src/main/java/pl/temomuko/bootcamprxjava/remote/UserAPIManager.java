@@ -5,8 +5,8 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UserAPIManager {
-    private final String BASE_URL = "https://randomuser.me/";
     private static UserAPIManager instance;
+    private final String BASE_URL = "https://randomuser.me/";
     private UserService service;
 
     private UserAPIManager() {

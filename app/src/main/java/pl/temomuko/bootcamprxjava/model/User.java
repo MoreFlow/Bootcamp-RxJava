@@ -1,7 +1,5 @@
 package pl.temomuko.bootcamprxjava.model;
 
-import android.location.Location;
-
 public class User {
     private Picture picture;
     private Name name;
