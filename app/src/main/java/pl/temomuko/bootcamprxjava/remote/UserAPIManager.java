@@ -4,15 +4,14 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class APIManager {
-    private String baseUrl;
-    private static APIManager instance;
+public class UserAPIManager {
+    private final String BASE_URL = "https://randomuser.me/";
+    private static UserAPIManager instance;
     private UserService service;
 
-    private APIManager(String baseUrl) {
-        this.baseUrl = baseUrl;
+    private UserAPIManager() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(baseUrl)
+                .baseUrl(BASE_URL)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
@@ -20,9 +19,9 @@ public class APIManager {
         service = retrofit.create(UserService.class);
     }
 
-    public static APIManager getInstance(String baseUrl) {
+    public static UserAPIManager getInstance() {
         if (instance == null) {
-            instance = new APIManager(baseUrl);
+            instance = new UserAPIManager();
         }
         return instance;
     }
