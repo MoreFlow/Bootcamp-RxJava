@@ -1,9 +1,19 @@
 package pl.temomuko.bootcamprxjava.model;
 
+import android.location.Location;
+
 public class User {
     private Picture picture;
-    private String email;
     private Name name;
+    private Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
 
     public Picture getPicture() {
         return picture;
@@ -11,14 +21,6 @@ public class User {
 
     public void setPicture(Picture picture) {
         this.picture = picture;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Name getName() {
