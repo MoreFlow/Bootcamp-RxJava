@@ -27,7 +27,7 @@ public class MainPresenter {
                                 user.getName().getLast())))
                 .take(1)
                 //.flatMap(user -> )
-                .onErrorResumeNext()
+                //.onErrorResumeNext()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(view::setFirstPerson, view::showError);
