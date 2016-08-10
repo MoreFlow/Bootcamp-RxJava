@@ -26,13 +26,6 @@ public class MainPresenter {
                                 user.getName().getFirst(),
                                 user.getName().getLast())))
                 .take(1)
-//                 probowalem zrobic jeszcze to ze stolica, jest zrobiony caly retrofit do countryAPI (service/manager/model) ale nie udalo mi sie
-//                .flatMap(user ->
-//                        CountryAPIManager.getInstance().getService().getCountryByCapital(user.getLocation().getCity())
-//                            .map(countryResponse -> countryResponse.getName())
-//
-//                )
-//                .onErrorResumeNext(throwable -> null)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(view::setFirstPerson, view::showError);
